@@ -1,0 +1,194 @@
+Q1) Write a java code with the class named ‘acad’ and a method ‘main’. Hardcode the program
+with two integers and print the sum of those two.
+
+import java.util.*;
+import java.lang.*;
+class Acad{
+public static void main(String args[]){
+int a=6;
+int b=7;
+System.out.println(a+b);
+}
+}
+
+Q2) Rewrite the above code, where, inputs are provided by the user at runtime and the output
+is printed.
+
+import java.util.*;
+import java.lang.*;
+class Acad{
+public static void main(String args[]){
+int a,b;
+Scanner s=new Scanner(System.in);
+a=s.nextInt();
+b=s.nextInt();
+System.out.println(a+b);
+}
+}
+
+
+Q3) Write a program with method name sum() that accepts two parameters from user and print
+the sum two numbers.
+
+
+import java.util.*;
+import java.lang.*;
+class Acad{
+public void sum(int w,int x)
+{
+System.out.println(w+x);
+}
+public static void main(String args[]){
+int a,b;
+Scanner s=new Scanner(System.in);
+a=s.nextInt();
+b=s.nextInt();
+System.out.println("First number is:"+a);
+System.out.println("Second number is:"+b);
+System.out.println("Sum is:");
+sum(a,b);
+}
+}
+
+Q4) Write a program to accepts two numbers from stdin and find all the odd as well as even
+numbers present in between them.
+
+class acad
+{
+public static void main(String args[])
+{
+int a,b;
+Scanner s=new Scanner(System.in);
+a=s.nextInt();
+b=s.nextInt();
+for(int i=a+1;i<b;i++)
+{
+System.out.println(i);
+}
+}
+}
+
+Q5) Joe is scared to go to school. When her dad asked the reason, Joe said she is unable to complete
+the task given by her teacher. The task was to find the “first 10 multiples” of the number entered
+from stdin.
+Example:
+Input: 3
+O/p:
+3 x 1 = 3
+3 x 2 = 6
+………
+………
+…….
+….
+3 x 10 = 30
+Help Joe in completing the task!
+
+class acad
+{
+public static void main(String args[])
+{
+int a;
+Scanner s=new Scanner(System.in);
+a=s.nextInt();
+for(int i=1;i<11;i++)
+{
+System.out.println(a+"*"+i+"="+(a*i));
+}
+}
+}
+
+Q6) Write a program consisting method sum() and demonstrate the concept of method
+overloading using this method.
+
+class acad
+{
+void sum(int a,int b)
+{
+System.out.println("Sum is:"+(a+b));
+}
+void sum(double a,double b)
+{
+System.out.println("Sum is:"+(a+b));
+}
+public static void main(String args[])
+{
+int a,b;
+double c,d;
+Scanner s=new Scanner(System.in);
+System.out.println("enter two integers:");
+a=s.nextInt();
+b=s.nextInt();
+sum(a,b);
+System.out.println("enter two float value:");
+c=nextDouble();
+d=nextDouble();
+sum(c,d);
+}
+}
+
+Q7) Can you overload a method with the same return type? Explain your answer with proper logic.
+
+No, we cannot overload methods based on return-type alone i.e. the following is not valid:
+public class SomeClass
+{
+    public int GetValue() 
+    { 
+     return 1; 
+    }
+    public String GetValue() 
+    { 
+     return "abc"; 
+    }
+}
+But we can overload on both the number of parameters and their type, so the following are all valid:
+public void DoSomething(int value) 
+{ }
+public void DoSomething(string value) 
+{ }
+public void DoSomething(int value, string value) 
+{ }
+So, we can vary the return type of these methods - methods cannot only be overloaded based on their return type alone but they can differ if their parameter lists are different.
+We can overload with same return type but the type of arguments should differ.
+If return type as well as arguments are of same type in different functions, then it canot be overloaded.
+
+Q8) Write a program in java using Arrays that sorts the element in descending order.
+
+import java.util.Scanner;
+public class Descending_Order
+{
+    public static void main(String[] args) 
+    {
+        int n, temp;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter no. of elements you want in array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter all the elements:");
+        for (int i = 0; i < n; i++) 
+        {
+            a[i] = s.nextInt();
+        }
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = i + 1; j < n; j++) 
+            {
+                if (a[i] < a[j]) 
+                {
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        System.out.print("Descending Order:");
+        for (int i = 0; i < n - 1; i++) 
+        {
+            System.out.print(a[i] + ",");
+        }
+        System.out.print(a[n - 1]);
+    }
+}
+
+
+
+
